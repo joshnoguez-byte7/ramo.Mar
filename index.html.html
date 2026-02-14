@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para Mariana 💕</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: radial-gradient(circle at top,#0d1b2a,#000814);
+  overflow:hidden;
+  font-family:Arial, sans-serif;
+  color:white;
+}
+
+/* Pantalla inicial */
+.inicio{
+  position:absolute;
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#000814;
+  z-index:10;
+  cursor:pointer;
+  font-size:28px;
+  animation:parpadeo 1.5s infinite;
+}
+
+@keyframes parpadeo{
+  0%,100%{opacity:1;}
+  50%{opacity:0.5;}
+}
+
+h1{
+  position:absolute;
+  top:40px;
+  opacity:0;
+  transition:1s;
+  text-shadow:0 0 15px gold;
+}
+
+.ramo{
+  position:relative;
+  width:600px;
+  height:500px;
+}
+
+/* TALLOS */
+.tallo{
+  position:absolute;
+  bottom:0;
+  width:6px;
+  height:0;
+  background:#2ecc71;
+  border-radius:3px;
+  animation:crecer 2s forwards;
+}
+
+/* HOJAS */
+.hoja{
+  position:absolute;
+  width:40px;
+  height:20px;
+  background:linear-gradient(to right,#2ecc71,#27ae60);
+  border-radius:20px 0 20px 0;
+  opacity:0;
+  transform:scale(0);
+  animation:aparecerHoja 1s forwards;
+}
+
+@keyframes aparecerHoja{
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
+/* Posiciones hojas */
+.h1{ bottom:120px; left:90px; transform:rotate(-30deg); animation-delay:1s;}
+.h2{ bottom:170px; left:150px; transform:rotate(40deg); animation-delay:1.5s;}
+.h3{ bottom:140px; left:210px; transform:rotate(-35deg); animation-delay:2s;}
+.h4{ bottom:180px; left:290px; transform:rotate(35deg); animation-delay:2.5s;}
+.h5{ bottom:130px; left:370px; transform:rotate(-30deg); animation-delay:3s;}
+
+@keyframes crecer{
+  to{ height:250px;}
+}
+
+.t1{left:100px; animation-delay:0.5s;}
+.t2{left:160px; animation-delay:1s;}
+.t3{left:220px; animation-delay:1.5s;}
+.t4{left:300px; animation-delay:2s;}
+.t5{left:380px; animation-delay:2.5s;}
+
+/* FLOR */
+.flor{
+  position:absolute;
+  width:120px;
+  height:120px;
+  opacity:0;
+  transform:scale(0);
+  animation:florecer 1.5s forwards;
+}
+
+@keyframes florecer{
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
+.f1{left:60px; top:120px; animation-delay:2s;}
+.f2{left:120px; top:80px; animation-delay:2.5s;}
+.f3{left:180px; top:110px; animation-delay:3s;}
+.f4{left:260px; top:90px; animation-delay:3.5s;}
+.f5{left:340px; top:120px; animation-delay:4s;}
+
+.petalo{
+  position:absolute;
+  width:22px;
+  height:70px;
+  background:linear-gradient(to bottom,#fff176,#fbc02d);
+  border-radius:50px;
+  top:-10px;
+  left:49px;
+  transform-origin:center 70px;
+  border:2px solid #f9a825;
+}
+
+.petalo:nth-child(1){ transform:rotate(0deg) translateY(-20px);}
+.petalo:nth-child(2){ transform:rotate(22deg) translateY(-20px);}
+.petalo:nth-child(3){ transform:rotate(45deg) translateY(-20px);}
+.petalo:nth-child(4){ transform:rotate(67deg) translateY(-20px);}
+.petalo:nth-child(5){ transform:rotate(90deg) translateY(-20px);}
+.petalo:nth-child(6){ transform:rotate(112deg) translateY(-20px);}
+.petalo:nth-child(7){ transform:rotate(135deg) translateY(-20px);}
+.petalo:nth-child(8){ transform:rotate(157deg) translateY(-20px);}
+.petalo:nth-child(9){ transform:rotate(180deg) translateY(-20px);}
+.petalo:nth-child(10){ transform:rotate(202deg) translateY(-20px);}
+.petalo:nth-child(11){ transform:rotate(225deg) translateY(-20px);}
+.petalo:nth-child(12){ transform:rotate(247deg) translateY(-20px);}
+.petalo:nth-child(13){ transform:rotate(270deg) translateY(-20px);}
+.petalo:nth-child(14){ transform:rotate(292deg) translateY(-20px);}
+.petalo:nth-child(15){ transform:rotate(315deg) translateY(-20px);}
+.petalo:nth-child(16){ transform:rotate(337deg) translateY(-20px);}
+
+.centro{
+  position:absolute;
+  width:60px;
+  height:60px;
+  background:radial-gradient(circle,#6d4c41,#3e2723);
+  border-radius:50%;
+  top:30px;
+  left:30px;
+  z-index:5;
+}
+
+/* PARTICULAS */
+.particula{
+  position:absolute;
+  width:4px;
+  height:4px;
+  background:white;
+  border-radius:50%;
+  animation:brillo 3s infinite ease-in-out;
+}
+
+@keyframes brillo{
+  0%,100%{opacity:0;}
+  50%{opacity:1;}
+}
+
+.p1{top:50px; left:50px;}
+.p2{top:200px; left:400px;}
+.p3{top:350px; left:150px;}
+.p4{top:100px; left:500px;}
+.p5{top:250px; left:80px;}
+.p6{top:80px; left:430px;}
+.p7{top:160px; left:460px;}
+.p8{top:240px; left:420px;}
+.p9{top:320px; left:470px;}
+.p10{top:400px; left:440px;}
+</style>
+</head>
+
+<body>
+
+<div class="inicio" onclick="iniciar()">Haz clic aquí 💕</div>
+
+<h1 id="mensaje">feliz 14 de febrero amorcito teamooo 💕</h1>
+
+<div class="ramo">
+  <div class="tallo t1"></div>
+  <div class="tallo t2"></div>
+  <div class="tallo t3"></div>
+  <div class="tallo t4"></div>
+  <div class="tallo t5"></div>
+  <div class="hoja h1"></div>
+  <div class="hoja h2"></div>
+  <div class="hoja h3"></div>
+  <div class="hoja h4"></div>
+  <div class="hoja h5"></div>
+
+  <div class="flor f1">
+    <div class="petalo"></div><div class="petalo"></div><div class="petalo"></div><div class="petalo"></div>
+    <div class="petalo"></div><div class="petalo"></div><div class="petalo"></div><div class="petalo"></div>
+    <div class="petalo"></div><div class="petalo"></div><div class="petalo"></div><div class="petalo"></div>
+    <div class="petalo"></div><div class="petalo"></div><div class="petalo"></div><div class="petalo"></div>
+    <div class="centro"></div>
+  </div>
+
+  <div class="flor f2">
+    <div class="petalo"></div><div class="petalo"></div><div class="petalo"></div><div class="petalo"></div>
+    <div class="petalo"></div><div class="petalo"></div><div class="petalo"></div><div class="petalo"></div>
+    <div class="petalo"></div><div class="petalo"></div><div class="petalo"></div><div class="petalo"></div>
+    <div class="petalo"></div><div class="petalo"></div><div class="petalo"></div><div class="petalo"></div>
+    <div class="centro"></div>
+  </div>
+
+  <div class="flor f3">
+    <div class="petalo"></div><div class="petalo"></div><div class="petalo"></div><div class="petalo"></div>
+    <div class="petalo"></div><div class="petalo"></div><div class="petalo"></div><div class="petalo"></div>
+    <div class="petalo"></div><div class="petalo"></div><div class="petalo"></div><div class="petalo"></div>
+    <div class="petalo"></div><div class="petalo"></div><div class="petalo"></div><div class="petalo"></div>
+    <div class="centro"></div>
+  </div>
+
+  <div class="flor f4">
+    <div class="petalo"></div><div class="petalo"></div><div class="petalo"></div><div class="petalo"></div>
+    <div class="petalo"></div><div class="petalo"></div><div class="petalo"></div><div class="petalo"></div>
+    <div class="petalo"></div><div class="petalo"></div><div class="petalo"></div><div class="petalo"></div>
+    <div class="petalo"></div><div class="petalo"></div><div class="petalo"></div><div class="petalo"></div>
+    <div class="centro"></div>
+  </div>
+
+  <div class="flor f5">
+    <div class="petalo"></div><div class="petalo"></div><div class="petalo"></div><div class="petalo"></div>
+    <div class="petalo"></div><div class="petalo"></div><div class="petalo"></div><div class="petalo"></div>
+    <div class="petalo"></div><div class="petalo"></div><div class="petalo"></div><div class="petalo"></div>
+    <div class="petalo"></div><div class="petalo"></div><div class="petalo"></div><div class="petalo"></div>
+    <div class="centro"></div>
+  </div>
+</div>
+
+<div class="particula p1"></div>
+<div class="particula p2"></div>
+<div class="particula p3"></div>
+<div class="particula p4"></div>
+<div class="particula p5"></div>
+<div class="particula p6"></div>
+<div class="particula p7"></div>
+<div class="particula p8"></div>
+<div class="particula p9"></div>
+<div class="particula p10"></div>
+<script>
+function iniciar(){
+  document.querySelector(".inicio").style.display="none";
+  document.getElementById("mensaje").style.opacity="1";
+}
+</script>
+
+</body>
+</html>
